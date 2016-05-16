@@ -1,0 +1,43 @@
+<script type="text/javascript">
+window.onload = function(){
+
+// mocks webpage giving json
+var request = { 
+	"org_name": "Paradise Island", 
+	"daughters": [{ 
+		"org_name:": "Banana tree", 
+		"daughters": [{ 
+			"org_name": "Yellow Banana" 
+		}, { 
+			"org_name": "Brown Banana" 
+		}, { 
+			"org_name": "Black Banana" 
+		}] 
+	}, { 
+		"org_name:": "Big banana tree", 
+		"daughters": [{ 
+			"org_name": "Yellow Banana" 
+		}, { 
+			"org_name": "Brown Banana" 
+		}, { 
+			"org_name": "Green Banana" 
+		}, { 
+			"org_name": "Black Banana", 
+			"daughters": [{ 
+				"org_name": "Phoneutria Spider" 
+			}] 
+		}] 
+	}] 
+}; 
+
+ // construct an HTTP request
+  var xhr = new XMLHttpRequest();
+  // rerouts to test.js app.post("/add/post")
+  xhr.open("POST", " http://localhost:8080/add/post", true);
+  xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+
+  // send the collected data as JSON
+  xhr.send(JSON.stringify(request));
+};
+</script>
+<h1>JSON saved to the database. </h1>
