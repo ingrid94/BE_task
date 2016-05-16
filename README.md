@@ -13,3 +13,5 @@ To use POST request with your own json change variable 'request' in post.html. A
 To use DELETE request run the server and add '/remove' at the end of webpage. To see the result go to front page again.    
 
 It was difficult to implement data with recursion. I thought of adding parents' names and daughters' names with the organizations as different lists. I didn't manage to implement it since I'm not familiar with language and I have never used database recursively. Thus the POST and GET request are not complete.     
+
+Since I'm using Linux there might be some errors with getting right folders and files. (Especially about getting the current folder to open html pages) 
